@@ -1,0 +1,16 @@
+# ===== 智能文档问答助手 依赖 =====
+
+# 核心框架：固定 0.2.0（1.0.0 移除了 RAGTool/MemoryTool，API 不兼容）
+hello-agents[all]==0.2.0
+
+# Web 界面
+gradio==6.24.0
+
+# 环境变量加载
+python-dotenv
+
+# PDF 文档解析（hello-agents 安装的 markitdown 默认不含 PDF 支持，需手动补 pdfplumber）
+pdfplumber
+
+# 版本兼容：qdrant-client 1.19+ 移除了 SearchRequest 导入，需固定 1.15.x
+qdrant-client==1.15.1
